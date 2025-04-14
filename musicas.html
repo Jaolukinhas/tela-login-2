@@ -5,67 +5,35 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Minhas Músicas</title>
   <link rel="stylesheet" href="musicas.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
 
-  <!-- Header com Barra de Pesquisa -->
   <header>
-    <div class="logo">Meu Player</div>
-    <div class="search-bar">
-      <input type="text" id="search" placeholder="Pesquise músicas...">
+    <div class="titulo">My Play</div>
+    <div class="cabecalho">
+      <input type="search" id="barra-pesquisa" placeholder=" Pesquisar">
+      <button class="pesquisar" style="padding: 10px 16px; background-color: #6a0dad; color: white; border: none; border-radius: 0 8px 8px 0; cursor: pointer;">
+        <i class="fas fa-search"></i>
+      </button>
+      
     </div>
+    
   </header>
+  <nav class="menu">
+    <ul>
+      <a href="#">Minha conta</a>
+      <a href="#">Premium</a>
+      <a href="#">Configurações</a>
+    </ul>
+  </nav>
+  <main>
 
-  <!-- Seção de Playlists com Capas -->
-  <div class="playlists">
-    <h2>Escolha sua Playlist:</h2>
-    <div class="playlist-list">
-      <div class="playlist" id="playlist1">
-        <img src="imagens/foto1.jpg" alt="Playlist 1">
-        <p>Playlist 1</p>
-      </div>
-      <div class="playlist" id="playlist2">
-        <img src="imagens/foto2.jpg" alt="Playlist 2">
-        <p>Playlist 2</p>
-      </div>
-      <div class="playlist" id="playlist3">
-        <img src="imagens/foto3.jpg" alt="Playlist 3">
-        <p>Playlist 3</p>
-      </div>
-    </div>
+  </main>
+  <footer>
 
-    <!-- Lista de Músicas (inicialmente oculta) -->
-    <div class="music-list" id="music-list">
-      <h3>Músicas</h3>
-      <ul id="song-list">
-        <!-- Músicas serão inseridas aqui dinamicamente -->
-      </ul>
-    </div>
-  </div>
-
-  <!-- Player de Música -->
-  <div class="player">
-    <div class="player-controls">
-      <button class="prev-btn" id="prev-btn">&#9664;</button>
-      <audio id="audio" controls>
-        <source src="musicas/Matuê - Isso é Sério ft. Brandão.mp3" type="audio/mp3">
-        Seu navegador não suporta o elemento de áudio.
-      </audio>
-      <button class="next-btn" id="next-btn">&#9654;</button>
-    </div>
-    <div class="track-info">
-      <p id="song-title">Música 1</p>
-      <p id="song-artist">Artista</p>
-    </div>
-    <progress id="progress-bar" value="0" max="100"></progress>
-    <div class="volume-control">
-      <label for="volume">Volume</label>
-      <input type="range" id="volume" min="0" max="1" step="0.01" value="1">
-    </div>
-    <div class="time-display">
-      <span id="current-time">00:00</span> / <span id="duration">00:00</span>
-    </div>
-  </div>
+  </footer>
   
   <script src="musicas.js"></script>
 </body>
