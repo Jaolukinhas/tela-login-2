@@ -29,11 +29,66 @@
     </ul>
   </nav>
   <main>
-
+    <div class="galeria">
+      <div class="album" onclick="mostrarPlaylist(1)">
+        <img src="imagens/foto1.jpg" alt="Álbum 1">
+        <div class="playlist" id="playlist1" style="display: none;">
+          <h3>Playlist 1</h3>
+          <ul>
+            <li onclick="tocarMusica('musicas/Castlevania.mp3')">Castlevania - Matuê</li>
+            <li onclick="tocarMusica('musicas/Matuê - Isso é Sério ft. Brandão.mp3')">Isso é Sério - Matuê/Brandão</li>
+            <li onclick="tocarMusica('musicas/Japa & Ryu, The Runner - FNB.mp3')">FNB - Japa/Ryu, The Runner</li>
+          </ul>
+        </div>
+        
+        
+      </div>
+  
+      <div class="album" onclick="mostrarPlaylist(2)">
+        <img src="imagens/foto2.jpg" alt="Álbum 2">
+        <div class="playlist" id="playlist1" style="display: none;">
+          <h3>Playlist 1</h3>
+          <ul>
+            <li onclick="tocarMusica('musica1.mp3')">Música 1 - Nome da Música</li>
+            <li onclick="tocarMusica('musica2.mp3')">Música 2 - Outra Música</li>
+            <li onclick="tocarMusica('musica3.mp3')">Música 3 - E por aí vai...</li>
+          </ul>
+        </div>
+        
+      </div>
+  
+      <div class="album" onclick="mostrarPlaylist(3)">
+        <img src="imagens/foto3.jpg" alt="Álbum 3">
+        <div class="playlist" id="playlist1" style="display: none;">
+          <h3>Playlist 1</h3>
+          <ul>
+            <li onclick="tocarMusica('musica1.mp3')">Música 1 - Nome da Música</li>
+            <li onclick="tocarMusica('musica2.mp3')">Música 2 - Outra Música</li>
+            <li onclick="tocarMusica('musica3.mp3')">Música 3 - E por aí vai...</li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
   </main>
   <footer>
 
   </footer>
+
+  <div id="player-container">
+    <audio id="audio-player" preload="metadata"></audio>
+  
+    <div class="controls">
+      <button onclick="voltarMusica()"><i class="fas fa-backward"></i></button>
+      <button onclick="playPause()"><i class="fas fa-play" id="play-icon"></i></button>
+      <button onclick="avancarMusica()"><i class="fas fa-forward"></i></button>
+  
+      <input type="range" id="progress" value="0" onchange="mudarProgresso()">
+  
+      <input type="range" id="volume" min="0" max="1" step="0.01" onchange="mudarVolume()" value="1">
+    </div>
+  </div>
+  
   
   <script src="musicas.js"></script>
 </body>
